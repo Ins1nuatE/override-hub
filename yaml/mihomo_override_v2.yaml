@@ -3,27 +3,26 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
     type: select
     proxies:
-      - 手动切换
       - 自动选择
+      - 手动切换
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
   - name: 手动切换
     icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
     include-all: true
     filter: (?i)^(香港|台湾|新加坡|日本|美国|马来西亚|土耳其|阿根廷|韩国)
     type: select
-  - name: 自动选择
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
-    type: url-test
-    include-all: true
-    filter: (?i)^(香港|台湾|新加坡|日本|美国|马来西亚|土耳其|阿根廷|韩国)
-    interval: 300
-    tolerance: 50
   - name: AI
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
-    include-all: true
-    filter: (?i)^(香港|台湾|新加坡|日本|美国|马来西亚|土耳其|阿根廷|韩国)
     type: select
     proxies:
-      - 节点选择
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
   - name: Steam
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png
     type: select
@@ -45,7 +44,6 @@ proxy-groups:
       - 台湾节点
       - 新加坡节点
       - 日本节点
-      - 节点选择
   - name: Netflix
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
     type: select
@@ -55,7 +53,6 @@ proxy-groups:
       - 台湾节点
       - 新加坡节点
       - 日本节点
-      - 节点选择
   - name: 巴哈姆特
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png
     type: select
@@ -65,7 +62,6 @@ proxy-groups:
       - 新加坡节点
       - 日本节点
       - 美国节点
-      - 节点选择
   - name: 广告拦截
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png
     type: select
@@ -84,6 +80,13 @@ proxy-groups:
     proxies:
       - 节点选择
       - DIRECT
+  - name: 自动选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+    type: url-test
+    include-all: true
+    filter: (?i)^(香港|台湾|新加坡|日本|美国|马来西亚|土耳其|阿根廷|韩国)
+    interval: 300
+    tolerance: 50
   - name: 香港节点
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
     include-all: true
@@ -149,41 +152,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Bing:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Bing.list
-    path: ./ruleset/Bing.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  Microsoft:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Microsoft.list
-    path: ./ruleset/Microsoft.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  OneDrive:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/OneDrive.list
-    path: ./ruleset/OneDrive.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  Apple:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Apple.list
-    path: ./ruleset/Apple.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  GoogleCN:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/GoogleCN.list
-    path: ./ruleset/GoogleCN.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   AI-MIX:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/AI.list
     path: ./ruleset/AI.list
@@ -191,9 +159,37 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  OpenAi:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/OpenAi.list
-    path: ./ruleset/OpenAi.list
+  Gemini:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
+    path: ./ruleset/Gemini.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  OpenAI:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
+    path: ./ruleset/OpenAI.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Bing:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.list
+    path: ./ruleset/Bing.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Microsoft:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
+    path: ./ruleset/Microsoft.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Apple:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
+    path: ./ruleset/Apple.list
     behavior: classical
     interval: 86400
     format: text
@@ -201,6 +197,13 @@ rule-providers:
   SteamCN:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list
     path: ./ruleset/SteamCN.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  GameDownloadCN:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.list
+    path: ./ruleset/GameDownloadCN.list
     behavior: classical
     interval: 86400
     format: text
@@ -213,15 +216,22 @@ rule-providers:
     format: text
     type: http
   Epic:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Epic.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list
     path: ./ruleset/Epic.list
     behavior: classical
     interval: 86400
     format: text
     type: http
-  Origin:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Origin.list
-    path: ./ruleset/Origin.list
+  EA:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EA/EA.list
+    path: ./ruleset/EA.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Xbox:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Xbox/Xbox.yaml
+    path: ./ruleset/Xbox.list
     behavior: classical
     interval: 86400
     format: text
@@ -240,6 +250,20 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Google:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
+    path: ./ruleset/Google.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  GitHub:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
+    path: ./ruleset/GitHub.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   Telegram:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Telegram.list
     path: ./ruleset/Telegram.list
@@ -248,7 +272,7 @@ rule-providers:
     format: text
     type: http
   YouTube:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/YouTube.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
     path: ./ruleset/YouTube.list
     behavior: classical
     interval: 86400
@@ -268,27 +292,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Bilibili:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Bilibili.list
-    path: ./ruleset/Bilibili.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  BilibiliHMT:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/BilibiliHMT.list
-    path: ./ruleset/BilibiliHMT.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  NetEaseMusic:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/NetEaseMusic.list
-    path: ./ruleset/NetEaseMusic.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   ProxyMedia:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyMedia.list
     path: ./ruleset/ProxyMedia.list
@@ -296,9 +299,16 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  ProxyGFWlist:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list
-    path: ./ruleset/ProxyGFWlist.list
+  BiliBili:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.list
+    path: ./ruleset/BiliBili.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  NetEaseMusic:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.list
+    path: ./ruleset/NetEaseMusic.list
     behavior: classical
     interval: 86400
     format: text
@@ -331,41 +341,50 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  ProxyGFWlist:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list
+    path: ./ruleset/ProxyGFWlist.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "RULE-SET,UnBan,DIRECT"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,广告拦截"
+  - "RULE-SET,AI-MIX,AI"
+  - "RULE-SET,Gemini,AI"
+  - "RULE-SET,OpenAI,AI"
   - "RULE-SET,Bing,全球直连"
   - "RULE-SET,Microsoft,全球直连"
-  - "RULE-SET,OneDrive,全球直连"
   - "RULE-SET,Apple,全球直连"
-  - "RULE-SET,GoogleCN,全球直连"
-  - "RULE-SET,AI-MIX,AI"
-  - "RULE-SET,OpenAi,AI"
-  - "RULE-SET,SteamCN,全球直连"
-  - "GEOSITE,steam@cn,全球直连"
-  - "GEOSITE,category-games@cn,全球直连"
+  - "RULE-SET,SteamCN,DIRECT"
+  - "RULE-SET,GameDownloadCN,DIRECT"
+  - "GEOSITE,steam@cn,DIRECT"
+  - "GEOSITE,category-games@cn,DIRECT"
   - "RULE-SET,Steam,Steam"
+  - "GEOSITE,steam,Steam"
   - "RULE-SET,Epic,游戏平台"
-  - "RULE-SET,Origin,游戏平台"
+  - "RULE-SET,EA,游戏平台"
+  - "RULE-SET,Xbox,游戏平台"
   - "RULE-SET,Sony,游戏平台"
   - "RULE-SET,Nintendo,游戏平台"
-  - "GEOSITE,steam,Steam"
   - "GEOSITE,category-games,游戏平台"
+  - "RULE-SET,Google,节点选择"
+  - "RULE-SET,GitHub,节点选择"
   - "RULE-SET,Telegram,节点选择"
   - "RULE-SET,YouTube,YouTube"
   - "RULE-SET,Netflix,Netflix"
   - "RULE-SET,Bahamut,巴哈姆特"
-  - "RULE-SET,Bilibili,DIRECT"
-  - "RULE-SET,BilibiliHMT,DIRECT"
-  - "RULE-SET,NetEaseMusic,DIRECT"
   - "RULE-SET,ProxyMedia,节点选择"
-  - "RULE-SET,ProxyGFWlist,节点选择"
+  - "RULE-SET,BiliBili,DIRECT"
+  - "RULE-SET,NetEaseMusic,DIRECT"
   - "RULE-SET,ChinaMedia,DIRECT"
   - "RULE-SET,ChinaCompanyIp,DIRECT"
   - "RULE-SET,ChinaDomain,DIRECT"
   - "RULE-SET,Download,DIRECT"
+  - "RULE-SET,ProxyGFWlist,节点选择"
   - "GEOIP,cn,DIRECT"
   - "MATCH,漏网之鱼"
