@@ -368,7 +368,7 @@ rules:
   - "GEOSITE,steam,Steam"
   - "RULE-SET,Epic,游戏平台"
   - "RULE-SET,EA,游戏平台"
-  - "RULE-SET,Xbox,游戏平台"
+  - "RULE-SET,Xbox,DIRECT"
   - "RULE-SET,Sony,游戏平台"
   - "RULE-SET,Nintendo,游戏平台"
   - "GEOSITE,category-games,游戏平台"
