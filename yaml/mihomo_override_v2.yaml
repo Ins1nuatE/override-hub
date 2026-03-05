@@ -187,6 +187,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Apple:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
+    path: ./ruleset/Apple.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   Bing:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.list
     path: ./ruleset/Bing.list
@@ -197,13 +204,6 @@ rule-providers:
   Microsoft:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
     path: ./ruleset/Microsoft.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  Apple:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
-    path: ./ruleset/Apple.list
     behavior: classical
     interval: 86400
     format: text
@@ -278,6 +278,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Twitter:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list
+    path: ./ruleset/Twitter.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   Telegram:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Telegram.list
     path: ./ruleset/Telegram.list
@@ -313,23 +320,9 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  BiliBili:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.list
-    path: ./ruleset/BiliBili.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  NetEaseMusic:
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.list
-    path: ./ruleset/NetEaseMusic.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  ChinaMedia:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaMedia.list
-    path: ./ruleset/ChinaMedia.list
+  ProxyGFWlist:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list
+    path: ./ruleset/ProxyGFWlist.list
     behavior: classical
     interval: 86400
     format: text
@@ -348,16 +341,16 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Download:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Download.list
-    path: ./ruleset/Download.list
+  ChinaMedia:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaMedia.list
+    path: ./ruleset/ChinaMedia.list
     behavior: classical
     interval: 86400
     format: text
     type: http
-  ProxyGFWlist:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list
-    path: ./ruleset/ProxyGFWlist.list
+  Download:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Download.list
+    path: ./ruleset/Download.list
     behavior: classical
     interval: 86400
     format: text
@@ -368,37 +361,43 @@ rules:
   - "RULE-SET,UnBan,DIRECT"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,广告拦截"
+
   - "RULE-SET,AI-MIX,AI"
   - "RULE-SET,Gemini,AI"
   - "RULE-SET,OpenAI,AI"
+
+  - "RULE-SET,Apple,全球直连"
   - "RULE-SET,Bing,全球直连"
   - "RULE-SET,Microsoft,全球直连"
-  - "RULE-SET,Apple,全球直连"
+
   - "RULE-SET,SteamCN,DIRECT"
   - "RULE-SET,GameDownloadCN,DIRECT"
   - "GEOSITE,steam@cn,DIRECT"
   - "GEOSITE,category-games@cn,DIRECT"
+
   - "RULE-SET,Steam,Steam"
-  - "GEOSITE,steam,Steam"
   - "RULE-SET,Xbox,Xbox"
   - "RULE-SET,Epic,游戏平台"
   - "RULE-SET,EA,游戏平台"
   - "RULE-SET,Sony,游戏平台"
   - "RULE-SET,Nintendo,游戏平台"
+  - "GEOSITE,steam,Steam"
   - "GEOSITE,category-games,游戏平台"
+
   - "RULE-SET,Google,节点选择"
   - "RULE-SET,GitHub,节点选择"
+  - "RULE-SET,Twitter,节点选择"
   - "RULE-SET,Telegram,节点选择"
   - "RULE-SET,YouTube,YouTube"
   - "RULE-SET,Netflix,Netflix"
   - "RULE-SET,Bahamut,巴哈姆特"
   - "RULE-SET,ProxyMedia,节点选择"
-  - "RULE-SET,BiliBili,DIRECT"
-  - "RULE-SET,NetEaseMusic,DIRECT"
-  - "RULE-SET,ChinaMedia,DIRECT"
+  - "RULE-SET,ProxyGFWlist,节点选择"
+
   - "RULE-SET,ChinaCompanyIp,DIRECT"
   - "RULE-SET,ChinaDomain,DIRECT"
+  - "RULE-SET,ChinaMedia,DIRECT"
   - "RULE-SET,Download,DIRECT"
-  - "RULE-SET,ProxyGFWlist,节点选择"
+
   - "GEOIP,cn,DIRECT"
   - "MATCH,漏网之鱼"
