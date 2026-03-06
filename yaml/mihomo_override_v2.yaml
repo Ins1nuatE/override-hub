@@ -35,6 +35,11 @@ proxy-groups:
     type: select
     proxies:
       - 节点选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
       - DIRECT
   - name: Xbox
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Xbox.png
