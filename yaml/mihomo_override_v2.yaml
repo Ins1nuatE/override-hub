@@ -332,13 +332,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  ChinaCompanyIp:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaCompanyIp.list
-    path: ./ruleset/ChinaCompanyIp.list
-    behavior: ipcidr
-    interval: 86400
-    format: text
-    type: http
   ChinaDomain:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaDomain.list
     path: ./ruleset/ChinaDomain.list
@@ -399,7 +392,6 @@ rules:
   - "RULE-SET,ProxyMedia,节点选择"
   - "RULE-SET,ProxyGFWlist,节点选择"
 
-  - "RULE-SET,ChinaCompanyIp,DIRECT"
   - "RULE-SET,ChinaDomain,DIRECT"
   - "RULE-SET,ChinaMedia,DIRECT"
   - "RULE-SET,Download,DIRECT"
