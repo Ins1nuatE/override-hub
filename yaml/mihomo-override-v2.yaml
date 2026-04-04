@@ -14,13 +14,13 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
     include-all: true
-    filter: (?i)^(香港|台湾|新加坡|日本|美国|马来西亚|土耳其|阿根廷|韩国)
+    filter: (?i)(香港|台湾|新加坡|日本|美国|马来西亚|土耳其|阿根廷|韩国)
     interval: 300
     tolerance: 50
   - name: 手动切换
     icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
     include-all: true
-    filter: (?i)^(香港|台湾|新加坡|日本|美国|马来西亚|土耳其|阿根廷|韩国)
+    filter: (?i)(香港|台湾|新加坡|日本|美国|马来西亚|土耳其|阿根廷|韩国)
     type: select
   - name: AI
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
@@ -109,35 +109,35 @@ proxy-groups:
   - name: 香港节点
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
     include-all: true
-    filter: (?i)^(香港)
+    filter: (?i)(香港)
     type: url-test
     interval: 300
     tolerance: 50
   - name: 台湾节点
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
     include-all: true
-    filter: (?i)^(台湾)
+    filter: (?i)(台湾)
     type: url-test
     interval: 300
     tolerance: 50
   - name: 新加坡节点
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
     include-all: true
-    filter: (?i)^(新加坡)
+    filter: (?i)(新加坡)
     type: url-test
     interval: 300
     tolerance: 50
   - name: 日本节点
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
     include-all: true
-    filter: (?i)^(日本)
+    filter: (?i)(日本)
     type: url-test
     interval: 300
     tolerance: 50
   - name: 美国节点
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
     include-all: true
-    filter: (?i)^(美国)
+    filter: (?i)(美国)
     type: url-test
     interval: 300
     tolerance: 50
